@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-ink antialiased;
+}
+
+::selection {
+  @apply bg-cocoa/15 text-ink;
+}
+
+a {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2;
+}
+
+@layer components {
+  .section-spacing {
+    @apply py-14 md:py-16;
+  }
+
+  .field-input {
+    @apply h-12 w-full rounded-full border border-oat bg-white px-5 text-sm text-ink placeholder:text-stone transition-colors focus-visible:border-stone focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink;
+  }
+
+  .field-select {
+    @apply appearance-none rounded-full border border-oat bg-white px-4 py-2 pr-8 text-sm text-ink transition-colors focus-visible:border-stone focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237B746A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+  }
+
+  .surface-card {
+    @apply rounded-2xl border border-oat bg-white;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar while keeping scroll functionality */
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ---- Smooth details/summary content reveal ---- */
+@keyframes details-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+details[open] > :not(summary) {
+  animation: details-reveal 250ms ease-out;
+}
+
+/* ---- Reduced motion: respect user preference ---- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  details[open] > :not(summary) {
+    animation: none;
+  }
+}

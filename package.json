@@ -1,0 +1,36 @@
+{
+  "name": "website-pro",
+  "version": "1.0.0",
+  "description": "Premium home-linen ecommerce storefront reference built with Next.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "nextjs",
+    "ecommerce",
+    "storefront",
+    "home-linen"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.39.3",
+    "eslint-config-next": "^16.1.6",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.9.3"
+  }
+}

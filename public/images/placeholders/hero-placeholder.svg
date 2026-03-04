@@ -1,0 +1,5 @@
+<svg width="1800" height="1100" viewBox="0 0 1800 1100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hero placeholder">
+  <rect width="1800" height="1100" fill="#EEE5D8"/>
+  <rect x="160" y="120" width="1480" height="860" rx="46" fill="#F6F2EC"/>
+  <text x="900" y="585" text-anchor="middle" fill="#5B4A3A" font-family="Arial, sans-serif" font-size="64">Hero / Editorial Image</text>
+</svg>
